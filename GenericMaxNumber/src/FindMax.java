@@ -59,6 +59,6 @@ class MyGeneric<T extends Comparable<T>> {         //Generic class extending to 
 		return maximum;
 	                   		
 	}
-    
+   
    
 }
