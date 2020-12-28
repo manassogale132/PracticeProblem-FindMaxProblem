@@ -8,7 +8,7 @@ public class FindMax {
 		MyGeneric<Integer> intPosTwo = new MyGeneric<Integer>(56, 86, 38);            //Test 2
 		System.out.println(intPosTwo.maximumMethod());
 		
-		MyGeneric<Integer> intPosThree = new MyGeneric<Integer>(56, 86, 38);          //Test 3
+		MyGeneric<Integer> intPosThree = new MyGeneric<Integer>(56, 38, 86);          //Test 3
 		System.out.println(intPosThree.maximumMethod());
 	
 		System.out.println("  ");
