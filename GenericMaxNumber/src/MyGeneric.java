@@ -14,7 +14,7 @@ public class MyGeneric<T extends Comparable<T>> {         //Generic class extend
 	}
 
 
-	public T maximumMethod() {  //Return type of this method is <T> i.e Generic type with 3 parameters.
+	public T maximumMethod() {  //Return type of this method is <T> i.e Generic type.
 		
 		T maximum =  one;                   //1 : Initially we assume that 'maximum' is 'one'.
 		
