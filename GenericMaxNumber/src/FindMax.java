@@ -35,7 +35,7 @@ public class FindMax {
 		System.out.println(maximumMethod("Banana","Apple","Peach"));  
 		
 	}
-	
+
 	
 	//Generic Method.
 	public static <T extends Comparable<T>> T maximumMethod(T one,T two,T three) {  //Return type of this method is <T> i.e Generic type with 3 parameters.
