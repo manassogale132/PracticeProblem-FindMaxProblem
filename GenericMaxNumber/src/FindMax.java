@@ -3,19 +3,19 @@ public class FindMax {
 
 	public static void main(String[] args) {
 		
-		//one = 86 ,two = 36,three = 52;  (Maximum Number is at 1st Position).
-		System.out.println(maximumIntegerMethod(86,36,52));     
+		//one = 8.31f ,two = 4.31f,three = 5.99f;  (Maximum Number is at 1st Position).
+		System.out.println(maximumFloatMethod("8.31f","4.31f","5.99f"));     
 		
-		//one = 36 ,two = 86,three = 52;  (Maximum Number is at 2nd Position)
-		System.out.println(maximumIntegerMethod(36,86,52));     
+		//one = 4.31f ,two = 8.31f,three = 5.99f;  (Maximum Number is at 2nd Position)
+		System.out.println(maximumFloatMethod("4.31f","8.31f","5.99f"));     
 		
-		//one = 52 ,two = 36,three = 86;  (Maximum Number is at 3rd Position).
-		System.out.println(maximumIntegerMethod(52,36,86));  
+		//one = 5.99f ,two = 4.31f,three = 8.31f;  (Maximum Number is at 3rd Position).
+		System.out.println(maximumFloatMethod("5.99f","4.31f","8.31f"));  
 		
 	}
 	
 	
-	public static <T extends Comparable<T>> T maximumIntegerMethod(T one,T two,T three) {  //Return type of this method is <T> i.e Generic type with 3 parameters.
+	public static <T extends Comparable<T>> T maximumFloatMethod(T one,T two,T three) {  //Return type of this method is <T> i.e Generic type with 3 parameters.
 		
 		T maximum =  one;                   //1 : Initially we assume that 'maximum' is 'one'.
 		
@@ -31,5 +31,5 @@ public class FindMax {
 		return maximum;                     //Finally returning the 'maximum'.
 				
 	}
-	
+
 }
