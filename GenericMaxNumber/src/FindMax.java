@@ -22,6 +22,18 @@ public class FindMax {
 		
 		MyGeneric<String> StringPosThree = new MyGeneric<String>("Banana", "Apple", "Peach");   //Test 3
 		System.out.println(StringPosThree.maximumMethod());
+		
+		System.out.println("  ");
+		//--------------------------------------------------------------------------------------------------------
+		
+		MyGeneric<Float> floatPostOne = new MyGeneric<Float>(9.353f, 3.353f, 8.353f);           //Test 1
+		System.out.println(floatPostOne.maximumMethod());
+		
+		MyGeneric<Float> floatPostTwo = new MyGeneric<Float>(8.353f, 9.353f, 3.353f);            //Test 2
+		System.out.println(floatPostTwo.maximumMethod());
+		
+		MyGeneric<Float> floatPostThree = new MyGeneric<Float>(8.353f, 3.353f, 9.353f);          //Test 3
+		System.out.println(floatPostThree.maximumMethod());
 	
     }
 }
