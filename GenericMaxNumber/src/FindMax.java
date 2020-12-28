@@ -31,5 +31,5 @@ public class FindMax {
 		return maximum;                     //Finally returning the 'maximum'.
 				
 	}
-
+	
 }
