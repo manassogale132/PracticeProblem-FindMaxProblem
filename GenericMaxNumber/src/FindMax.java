@@ -38,7 +38,7 @@ public class FindMax {
 	}
 	
 	
-	//Method 1 for three integers.
+	//Generic Method-1 for three integers.
 	public static <T extends Comparable<T>> T maximumIntegerMethod(T one,T two,T three) {  //Return type of this method is <T> i.e Generic type with 3 parameters.
 		
 		T maximum =  one;                   //1 : Initially we assume that 'maximum' is 'one'.
@@ -57,7 +57,7 @@ public class FindMax {
 	}
 	
 	
-	//Method 2 for three floats.
+	//Generic Method-2 for three floats.
 	public static <T extends Comparable<T>> T maximumFloatMethod(T one,T two,T three) {  //Return type of this method is <T> i.e Generic type with 3 parameters.
 		
 		T maximum =  one;                   //1 : Initially we assume that 'maximum' is 'one'.
@@ -76,7 +76,7 @@ public class FindMax {
 	}
 	
 	
-	//Method 3 for three strings.
+	//Generic Method-3 for three strings.
 	public static <T extends Comparable<T>> T maximumStringMethod(T one,T two,T three) {  //Return type of this method is <T> i.e Generic type with 3 parameters.
 		
 		T maximum =  one;                   //1 : Initially we assume that 'maximum' is 'one'.
