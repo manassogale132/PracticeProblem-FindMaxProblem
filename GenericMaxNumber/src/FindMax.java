@@ -1,76 +1,42 @@
 public class FindMax {
-
-	public static void main(String[] args) {
-		
-		MyGeneric<Integer> intPosOne = new MyGeneric<Integer>(86, 38, 56);            //Test 1
-		System.out.println(intPosOne.maximumMethod());
-		 
-		MyGeneric<Integer> intPosTwo = new MyGeneric<Integer>(56, 86, 38);            //Test 2
-		System.out.println(intPosTwo.maximumMethod());
-		
-		MyGeneric<Integer> intPosThree = new MyGeneric<Integer>(56, 38, 86);          //Test 3
-		System.out.println(intPosThree.maximumMethod());
 	
-		System.out.println("  ");
-		//--------------------------------------------------------------------------------------------------------
+public static <T extends Comparable<T>> void genericSortMethod(T[] arr) {   // Generic method extending to Comparable with generic array as parameter.
 		
-		MyGeneric<String> stringPosOne = new MyGeneric<String>("Peach", "Apple", "Banana");     //Test 1
-		System.out.println(stringPosOne.maximumMethod());
+		T temp;
 		
-		MyGeneric<String> stringPosTwo = new MyGeneric<String>("Banana", "Peach", "Apple");     //Test 2
-		System.out.println(stringPosTwo.maximumMethod());
-		
-		MyGeneric<String> stringPosThree = new MyGeneric<String>("Banana", "Apple", "Peach");   //Test 3
-		System.out.println(stringPosThree.maximumMethod());
-		
-		System.out.println("  ");
-		//--------------------------------------------------------------------------------------------------------
-		
-		MyGeneric<Float> floatPostOne = new MyGeneric<Float>(9.353f, 3.353f, 8.353f);           //Test 1
-		System.out.println(floatPostOne.maximumMethod());
-		
-		MyGeneric<Float> floatPostTwo = new MyGeneric<Float>(8.353f, 9.353f, 3.353f);            //Test 2
-		System.out.println(floatPostTwo.maximumMethod());
-		
-		MyGeneric<Float> floatPostThree = new MyGeneric<Float>(8.353f, 3.353f, 9.353f);          //Test 3
-		System.out.println(floatPostThree.maximumMethod());
+	for(int i = 0 ; i<arr.length;i++) {                       //Sorting logic
+		for(int j = 0 ;j<arr.length-1;j++) {
+			
+			if(arr[j].compareTo(arr[j+1])<0) {
+				temp = arr[j];
+				arr[j]= arr[j+1];
+				arr[j+1]=temp;	
+				
+			}
+			
+		}
+    }for(int i = 0 ; i<arr.length;i++) {
+    	System.out.println(arr[i]);
+    }
 	
     }
-}
 
 
-class MyGeneric<T extends Comparable<T>> {         //Generic class extending to comparable
-	
-	T one;                                               //Generic variables
-	T two;
-	T three;
-
-	
-    public MyGeneric(T one, T two, T three) {
-		super();
-		this.one = one;
-		this.two = two;
-		this.three = three;
-	}
-
-
-	public T maximumMethod() {  //Return type of this method is <T> i.e Generic type.
+     public static void main(String[] args) {                //Main Method
 		
-		T maximum =  one;                   //1 : Initially we assume that 'maximum' is 'one'.
-		
-		if(two.compareTo(one) > 0 ) {       //2 : Then we use compareTo() method to test 'two' with previous 'maximum'-(i.e one).
-			
-			maximum = two;                  //Now updated maximum is 'two'.
-		}
-		
-		if(three.compareTo(maximum) > 0) {  //3 : Then we use compareTo() method to test 'three' with previous 'maximum'-(i.e two).
-			
-			maximum = three;                //Now updated maximum is 'three'.
-		}
-		
-		return maximum;
-	                   		
-	}
+     Integer[] intArray = {53,23,65,25,85,63};               //Integer array sort
+     genericSortMethod(intArray);
     
-   
-}
+     System.out.println(" ");
+     
+     Double[] doubleArray = {7.6,2.5,4.5,9.0,1.6};           //Double array sort
+     genericSortMethod(doubleArray);
+
+     System.out.println(" ");
+     
+     String[] stringArray = {"Peach","Apple","Orange","Banana","Mango"};   //String array sort
+     genericSortMethod(stringArray);
+	}		
+}  
+    
+
